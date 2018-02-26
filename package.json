@@ -1,6 +1,6 @@
 {
     "name": "@gunawanwijaya/utils",
-    "version": "1.0.8",
+    "version": "1.1.0",
     "description": "Collection of native progressive (es6) utility library",
     "main": "index.js",
     "scripts": {
@@ -9,8 +9,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "husky": {
-        "hooks": {
-        }
+        "hooks": {}
     },
     "repository": {
         "type": "git",
