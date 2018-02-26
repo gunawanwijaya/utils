@@ -9,6 +9,12 @@
         "build:prod": "npm run build && npm run min",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run min",
+            "pre-push": "npm run min"
+        }
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gunawanwijaya/utils.git"
@@ -22,6 +28,7 @@
     "devDependencies": {
         "browserify": "^16.1.0",
         "eslint": "^4.18.1",
+        "husky": "^0.15.0-rc.8",
         "uglify-es": "^3.3.9"
     }
 }
