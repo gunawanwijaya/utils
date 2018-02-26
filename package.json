@@ -1,18 +1,15 @@
 {
     "name": "@gunawanwijaya/utils",
     "version": "1.0.8",
-    "description": "Native utils collection library",
+    "description": "Collection of native progressive (es6) utility library",
     "main": "index.js",
     "scripts": {
-        "build": "browserify index.js -o ./dist/index.js",
-        "min": "uglifyjs ./lib/index.js -c -m -o ./dist/min.js",
-        "build:prod": "npm run build && npm run min",
+        "build": "./node_modules/.bin/browserify index.js | ./node_modules/.bin/uglifyjs -cm > ./dist/min.js",
+        "start": "npm run build && serve",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run min",
-            "pre-push": "npm run min"
         }
     },
     "repository": {
@@ -29,6 +26,7 @@
         "browserify": "^16.1.0",
         "eslint": "^4.18.1",
         "husky": "^0.15.0-rc.8",
+        "serve": "^6.5.0",
         "uglify-es": "^3.3.9"
     }
 }
