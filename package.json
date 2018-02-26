@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "browserify index.js -o ./dist/index.js",
-        "min": "uglifyjs ./dist/index.js -c -m -o ./dist/min.js",
+        "min": "uglifyjs ./lib/index.js -c -m -o ./dist/min.js",
         "build:prod": "npm run build && npm run min",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
